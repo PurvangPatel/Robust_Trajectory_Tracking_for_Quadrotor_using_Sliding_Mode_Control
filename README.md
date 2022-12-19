@@ -103,4 +103,6 @@ Following plot displays the desired trajectory to be tracked in green and the ac
 
 ![trajectory](https://user-images.githubusercontent.com/72921304/208376503-250e9ea8-881f-4274-8a5b-c75674691157.png)
 
-**Gazebo simulation**![ezgif com-gif-maker](https://user-images.githubusercontent.com/72921304/208376568-bcdbbdfb-691d-4f91-98c8-67eb480cf2fb.gif)
+**Gazebo simulation**
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/72921304/208376568-bcdbbdfb-691d-4f91-98c8-67eb480cf2fb.gif)
