@@ -55,42 +55,37 @@ class Quadrotor():
             coeff_x = self.traj_coeff(0,5,0,0)
             coeff_y = self.traj_coeff(0,5,0,0)
             coeff_z = self.traj_coeff(0,5,0,1)
-            coeff = np.array([coeff_x, coeff_y, coeff_z])
 
         elif self.t<= 20:  #P1 (0,0,1) to P2 (1,0,1)
             coeff_x = self.traj_coeff(5,20,0,1)
             coeff_y = self.traj_coeff(5,20,0,0)
             coeff_z = self.traj_coeff(5,20,1,1)
-            coeff = np.array([coeff_x, coeff_y, coeff_z])
 
         elif self.t<= 35:  #P2 (1,0,1) to P3 (1,1,1)
             coeff_x = self.traj_coeff(20,35,1,1)
             coeff_y = self.traj_coeff(20,35,0,1)
             coeff_z = self.traj_coeff(20,35,1,1)
-            coeff = np.array([coeff_x, coeff_y, coeff_z])
 
         elif self.t<= 50: #P3 (1,1,1) to P4 (0,1,1)
             coeff_x = self.traj_coeff(35,50,1,0)
             coeff_y = self.traj_coeff(35,50,1,1)
             coeff_z = self.traj_coeff(35,50,1,1)
-            coeff = np.array([coeff_x, coeff_y, coeff_z])          
 
         elif self.t<= 65: #P4 (0,1,1) to P5 (0,0,1)
             coeff_x = self.traj_coeff(50,65,0,0)
             coeff_y = self.traj_coeff(50,65,1,0)
             coeff_z = self.traj_coeff(50,65,1,1)
-            coeff = np.array([coeff_x, coeff_y, coeff_z])
 
         else: # Zero input after 65 secs
             coeff_x = np.zeros(6)
             coeff_y = np.zeros(6)
             coeff_z = np.zeros(6)
-            coeff = np.array([coeff_x, coeff_y, coeff_z])
-        return coeff
+            
+        return np.array([coeff_x, coeff_y, coeff_z])
 
     def traj_gen(self):
         
-        # Trajectory generation from obtained coefficient and time
+        # Trajectory generation from obtained coefficient and time matrix 'T'
         coeff = self.traj_evaluate()
         T = np.transpose(np.array([[1, self.t, self.t**2, self.t**3, self.t**4, self.t**5],  [0, 1, 2*self.t, 3*self.t**2, 4*self.t**3, 5*self.t**4], [0, 0, 2, 6*self.t, 12*self.t**2, 20*self.t**3]]))
 
