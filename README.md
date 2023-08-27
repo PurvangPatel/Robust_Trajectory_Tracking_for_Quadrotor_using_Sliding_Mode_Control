@@ -93,12 +93,6 @@ catkin build
 ```
 # Running the Project
 
-**Before running the project, make sure to change the directory to store log file for visualization**
-
-src/controller/scripts/**sliding_mode_control.py** -> Change directory on line **243**
-
-src/controller/scripts/**visualization.py** -> Change directory on line **20** and **26**
-
 **To spawn the quadrotor in Gazebo, we can run the following launch file:**
 
 ```
