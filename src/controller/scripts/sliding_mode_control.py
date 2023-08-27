@@ -234,8 +234,7 @@ class Quadrotor():
 
     # save the actual trajectory data
     def save_data(self):
-        #Caution: Change the directory
-        with open("/home/purvang/Robust_Trajectory_Tracking_for_Quadrotor_using_Sliding_Mode_Control/src/controller/scripts/log.pkl", "wb") as fp:
+        with open(os.getcwd() + "/src/controller/scripts/log.pkl", "wb") as fp:
             self.mutex_lock_on = True
             pickle.dump([self.t_series,self.x_series,self.y_series,self. z_series], fp)
 

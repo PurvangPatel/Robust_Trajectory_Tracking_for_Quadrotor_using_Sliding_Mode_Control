@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import matplotlib.pyplot as plt
 import pickle
 from mpl_toolkits.mplot3d import Axes3D
@@ -22,8 +23,7 @@ def visualization(x_series, y_series, z_series):
 
 
 if __name__ == '__main__':
-    #Caution: Change the directory
-    file = open("/home/purvang/Robust_Trajectory_Tracking_for_Quadrotor_using_Sliding_Mode_Control/src/controller/scripts/log.pkl",'rb') 
+    file = open(os.getcwd() + "/src/controller/scripts/log.pkl",'rb') 
     t_series, x_series, y_series, z_series = pickle.load(file)
     file.close()
     visualization(x_series, y_series, z_series)
