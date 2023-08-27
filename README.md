@@ -1,5 +1,19 @@
 # Robust Trajectory Tracking for Quadrotor using Sliding Mode Control
 
+# Simulation Results
+
+**Gazebo simulation**
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/72921304/208376568-bcdbbdfb-691d-4f91-98c8-67eb480cf2fb.gif)
+
+**Trajectory tracking**
+
+Following plot displays the desired trajectory to be tracked in green and the actual trajectory followed by the quadcopter in blue and their deviation.
+
+![trajectory](https://user-images.githubusercontent.com/72921304/208376503-250e9ea8-881f-4274-8a5b-c75674691157.png)
+
+# About the Project
+
 The objective of this project is to develop a robust control scheme to enable a quadrotor to track
 desired trajectories in the presence of external disturbances.The control design is tested on the Crazyflie 2.0 platform. Crazyflie is a quadrotor
 that is classified as a micro air vehicle (MAV), as it only weighs 27 grams and can fit in a hand.
@@ -94,15 +108,3 @@ roslaunch rotors_gazebo crazyflie2_without_controller.launch
 ```
 rosrun controller sliding_mode_control.py
 ```
-
-# Simulation Results
-
-**Trajectory tracking**
-
-Following plot displays the desired trajectory to be tracked in green and the actual trajectory followed by the quadcopter in blue and their deviation.
-
-![trajectory](https://user-images.githubusercontent.com/72921304/208376503-250e9ea8-881f-4274-8a5b-c75674691157.png)
-
-**Gazebo simulation**
-
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/72921304/208376568-bcdbbdfb-691d-4f91-98c8-67eb480cf2fb.gif)
